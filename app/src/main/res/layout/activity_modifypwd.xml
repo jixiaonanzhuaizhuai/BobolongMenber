@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.lgmember.view.TopBarView
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        custom:titleText="修改密码"
+        custom:titleSize="6sp"
+        custom:titleColor="#FFFFFF"
+        custom:leftBtn="@drawable/back_page"
+        custom:rightText="完成" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        android:layout_marginTop="15dp">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <TextView
+                android:text="当前密码"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginLeft="15dp"/>
+            <EditText
+                android:id="@+id/oldPwdEdt"
+                android:textColor="#000000"
+                android:background="@null"
+                android:layout_width="match_parent"
+                android:textCursorDrawable="@null"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:layout_marginLeft="10dp"
+                android:textSize="18sp" />
+        </LinearLayout>
+        <include layout="@layout/common_line"></include>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <TextView
+                android:text="新密码"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginLeft="15dp"/>
+            <EditText
+                android:id="@+id/newPwdEdt"
+                android:textColor="#000000"
+                android:background="@null"
+                android:layout_width="match_parent"
+                android:inputType="textPassword"
+                android:textCursorDrawable="@null"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textSize="18sp" />
+        </LinearLayout>
+        <include layout="@layout/common_line"></include>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <TextView
+                android:text="确认新密码"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginLeft="15dp"/>
+            <EditText
+                android:id="@+id/confirmNewPwdEdt"
+                android:textColor="#000000"
+                android:background="@null"
+                android:layout_width="match_parent"
+                android:inputType="textPassword"
+                android:textCursorDrawable="@null"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textSize="18sp" />
+        </LinearLayout>
+        <include layout="@layout/common_line"></include>
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="密码长度至少8个字符，最多20个字符"
+        android:textColor="#a1a1a1"
+        android:layout_marginTop="10dp"/>
+
+</LinearLayout>

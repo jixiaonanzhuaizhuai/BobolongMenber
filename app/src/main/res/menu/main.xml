@@ -1,0 +1,57 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.lgmember.MainActivity" >
+
+     <item
+        android:id="@+id/personal"
+        android:orderInCategory="100"
+        android:title="@string/personal"
+        app:showAsAction="never"/>
+     <item
+        android:id="@+id/activity"
+        android:orderInCategory="100"
+        android:title="@string/activity"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/scores"
+        android:orderInCategory="100"
+        android:title="@string/scores"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/exchange"
+        android:orderInCategory="100"
+        android:title="@string/exchange"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/card"
+        android:orderInCategory="100"
+        android:title="@string/card"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/sign"
+        android:orderInCategory="100"
+        android:title="@string/sign"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/messages"
+        android:orderInCategory="100"
+        android:title="@string/messages"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/collection"
+        android:orderInCategory="100"
+        android:title="@string/collection"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/question"
+        android:orderInCategory="100"
+        android:title="@string/question"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/setting"
+        android:orderInCategory="100"
+        android:title="@string/setting"
+        app:showAsAction="never"/>
+
+</menu>

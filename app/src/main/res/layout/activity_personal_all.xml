@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.lgmember.view.TopBarView
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        custom:titleText="个人资料"
+        custom:titleSize="6sp"
+        custom:titleColor="#FFFFFF"
+        custom:leftBtn="@drawable/back_page" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#ffffff"
+        android:layout_marginTop="10dp">
+
+    <RelativeLayout
+        android:id="@+id/rl_photo"
+        android:layout_width="match_parent"
+        android:layout_height="55dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:textSize="18sp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:text="头像"/>
+
+        <ImageView
+            android:id="@+id/iv_photo"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/circular_pthoto"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/iv_next"/>
+
+        <ImageView
+            android:id="@+id/iv_next"
+            android:layout_width="20dip"
+            android:layout_height="30dip"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/next_icon"/>
+    </RelativeLayout>
+    <include layout="@layout/common_line"></include>
+    <RelativeLayout
+        android:id="@+id/rl_personal"
+        android:layout_width="match_parent"
+        android:layout_height="55dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:textSize="18sp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:text="详细资料"/>
+        <ImageView
+            android:layout_width="20dip"
+            android:layout_height="30dip"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/next_icon"/>
+    </RelativeLayout>
+    <include layout="@layout/common_line"></include>
+
+    <RelativeLayout
+        android:id="@+id/rl_certification"
+        android:layout_width="match_parent"
+        android:layout_height="55dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:textSize="18sp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:text="实名认证"/>
+        <ImageView
+            android:layout_width="20dip"
+            android:layout_height="30dip"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/next_icon"/>
+    </RelativeLayout>
+    <include layout="@layout/common_line"></include>
+
+    </LinearLayout>
+
+</LinearLayout>

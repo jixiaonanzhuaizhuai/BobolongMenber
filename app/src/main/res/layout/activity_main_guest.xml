@@ -1,0 +1,187 @@
+<me.hwang.widgets.SmartPullableLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/layout_pullable"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+<ScrollView
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+		android:orientation="horizontal">
+        <TextView
+            android:id="@+id/menu_txt"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:padding="10dp"
+			android:layout_marginLeft="10dp"
+			android:textSize="20sp"
+            android:text="菜单" />
+        <ImageView
+            android:id="@+id/imageView1"
+            android:scaleType="centerInside"
+            android:layout_width="100dip"
+            android:layout_height="50dip"
+			android:layout_weight="1"
+            android:src="@mipmap/logo" />
+        <TextView
+            android:id="@+id/top_tv_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:padding="10dp"
+			android:textSize="20sp"
+            android:text="登录" />
+        <TextView
+            android:id="@+id/top_tv_exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:padding="10dp"
+			android:textSize="20sp"
+            android:text="退出" />
+    </LinearLayout>
+    <View
+        android:id="@+id/view1"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#cccccc" />
+	<LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+		android:orientation="horizontal">
+        
+	    <ImageView
+            android:id="@+id/touxiang"
+            android:scaleType="centerInside"
+            android:layout_width="100dip"
+            android:layout_height="100dip"
+			android:layout_margin="10dp"
+			android:background="@drawable/touxiang" />
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:layout_gravity="center">
+	    <TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textSize="16sp"
+			android:text="点击 " />
+		<TextView
+			android:id="@+id/tv_login"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="登录"
+			android:textSize="18sp"
+			android:textColor="@color/main_lan"/>
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textSize="16sp"
+			android:text=" 或 " />
+		<TextView
+			android:id="@+id/tv_register"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="注册"
+			android:textSize="18sp"
+			android:textColor="@color/main_lan"/>
+		</LinearLayout>
+	</LinearLayout>
+	<View
+		android:id="@+id/view3"
+		android:layout_width="fill_parent"
+		android:layout_height="1dp"
+		android:background="#cccccc" />
+	<TextView
+		android:id="@+id/textView4"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center_horizontal"
+		android:textSize="20sp"
+		android:text="推荐活动" />
+	<com.stx.xhb.xbanner.XBanner
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		android:id="@+id/recommendBanner"
+		android:layout_width="match_parent"
+		android:layout_height="180dp"
+		app:AutoPlayTime="3000"
+		app:pointsContainerBackground="#44aaaaaa"
+		app:pointNormal="@drawable/shape_noraml"
+		app:pointSelect="@drawable/shape_selected"
+		app:pointsPosition="RIGHT"
+		app:tipTextSize="12sp"
+		app:isShowNumberIndicator="true"
+		app:isShowIndicatorOnlyOne="true"
+		app:pageChangeDuration="800"/>
+	<TextView
+		android:id="@+id/rmoreactivity"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:textSize="18sp"
+		android:gravity="right"
+		android:padding="5dp"
+		android:text="更多活动>>" />
+	<View
+		android:id="@+id/view2"
+		android:layout_width="fill_parent"
+		android:layout_height="1dp"
+		android:background="#cccccc" />
+	<TextView
+		android:id="@+id/textView2"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center_horizontal"
+		android:textSize="20sp"
+		android:text="所有活动" />
+
+	<com.stx.xhb.xbanner.XBanner
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		android:id="@+id/allBanner"
+		android:layout_width="match_parent"
+		android:layout_height="180dp"
+		app:AutoPlayTime="3000"
+		app:pointsContainerBackground="#44aaaaaa"
+		app:pointNormal="@drawable/shape_noraml"
+		app:pointSelect="@drawable/shape_selected"
+		app:pointsPosition="RIGHT"
+		app:tipTextSize="12sp"
+		app:isShowNumberIndicator="true"
+		app:isShowIndicatorOnlyOne="true"
+		app:pageChangeDuration="800"/>
+	<TextView
+		android:id="@+id/moreactivity"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:gravity="right"
+		android:textSize="18sp"
+		android:padding="5dp"
+		android:text="更多活动>>" />
+	<View
+		android:id="@+id/view4"
+		android:layout_width="fill_parent"
+		android:layout_height="1dp"
+		android:background="#cccccc" />
+	<TextView
+		android:id="@+id/textView6"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center_horizontal"
+		android:textSize="20sp"
+		android:text="活动列表" />
+	<android.support.v7.widget.RecyclerView
+		android:id="@+id/rc_tags_list"
+		android:background="@color/white"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"/>
+</LinearLayout>
+</ScrollView>
+	</me.hwang.widgets.SmartPullableLayout>

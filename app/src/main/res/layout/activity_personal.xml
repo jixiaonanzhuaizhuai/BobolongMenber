@@ -1,0 +1,506 @@
+<ScrollView android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+        <com.lgmember.view.TopBarView
+            android:id="@+id/topbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            custom:titleText="详细资料"
+            custom:titleSize="6sp"
+            custom:titleColor="#FFFFFF"
+            custom:leftBtn="@drawable/back_page"
+            custom:rightText="编辑" />
+
+     <LinearLayout
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:background="#ffffff"
+         android:orientation="vertical"
+         android:layout_marginTop="15dp">
+
+         <LinearLayout
+             android:id="@+id/ll_name"
+             android:layout_width="fill_parent"
+             android:layout_height="40dp"
+             android:orientation="vertical"
+             android:gravity="center_vertical">
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginBottom="5dp"
+                 android:orientation="horizontal">
+             <TextView
+                 android:text="姓名"
+                 android:layout_width="100dp"
+                 android:layout_height="wrap_content"
+                 android:textSize="16sp"
+                 android:layout_marginLeft="15dp"/>
+             <TextView
+                 android:id="@+id/tv_name"
+                 android:textColor="#000000"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="10dp"
+                 android:textSize="16sp" />
+             </LinearLayout>
+             <include layout="@layout/common_line"></include>
+             </LinearLayout>
+         <LinearLayout
+             android:id="@+id/ll_card_no"
+             android:layout_width="fill_parent"
+             android:layout_height="40dp"
+             android:orientation="vertical"
+             android:gravity="center_vertical">
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 android:layout_marginBottom="5dp">
+             <TextView
+                 android:text="卡号"
+                 android:layout_width="100dp"
+                 android:layout_height="wrap_content"
+                 android:textSize="16sp"
+                 android:layout_marginLeft="15dp"/>
+             <TextView
+                 android:id="@+id/tv_card_no"
+                 android:textColor="#000000"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="10dp"
+                 android:textSize="16sp" />
+             </LinearLayout>
+             <include layout="@layout/common_line"></include>
+         </LinearLayout>
+
+         <LinearLayout
+             android:id="@+id/ll_point"
+             android:layout_width="fill_parent"
+             android:layout_height="40dp"
+             android:orientation="vertical"
+             android:gravity="center_vertical">
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 android:layout_marginBottom="5dp">
+             <TextView
+                 android:text="积分"
+                 android:layout_width="100dp"
+                 android:layout_height="wrap_content"
+                 android:textSize="16sp"
+                 android:layout_marginLeft="15dp"/>
+             <TextView
+                 android:id="@+id/tv_point"
+                 android:textColor="#000000"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="10dp"
+                 android:textSize="16sp" />
+             </LinearLayout>
+             <include layout="@layout/common_line"></include>
+         </LinearLayout>
+
+         <LinearLayout
+             android:id="@+id/ll_level"
+             android:layout_width="fill_parent"
+             android:layout_height="40dp"
+             android:orientation="vertical"
+             android:gravity="center_vertical">
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 android:layout_marginBottom="5dp">
+             <TextView
+                 android:text="等级"
+                 android:layout_width="100dp"
+                 android:layout_height="wrap_content"
+                 android:textSize="16sp"
+                 android:layout_marginLeft="15dp"/>
+             <TextView
+                 android:id="@+id/tv_level"
+                 android:textColor="#000000"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="10dp"
+                 android:textSize="16sp" />
+                 </LinearLayout>
+             <include layout="@layout/common_line"></include>
+         </LinearLayout>
+
+         <LinearLayout
+             android:id="@+id/ll_mobile"
+             android:layout_width="fill_parent"
+             android:layout_height="40dp"
+             android:orientation="vertical"
+             android:gravity="center_vertical">
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 android:layout_marginBottom="5dp">
+             <TextView
+                 android:text="手机号"
+                 android:layout_width="100dp"
+                 android:layout_height="wrap_content"
+                 android:textSize="16sp"
+                 android:layout_marginLeft="15dp"/>
+             <TextView
+                 android:id="@+id/tv_mobile"
+                 android:textColor="#000000"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="10dp"
+                 android:textSize="16sp" />
+                 </LinearLayout>
+             <include layout="@layout/common_line"></include>
+         </LinearLayout>
+
+         <LinearLayout
+             android:id="@+id/ll_idno"
+             android:layout_width="fill_parent"
+             android:layout_height="40dp"
+             android:orientation="vertical"
+             android:gravity="center_vertical">
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 android:layout_marginBottom="5dp">
+             <TextView
+                 android:text="身份证号"
+                 android:layout_width="100dp"
+                 android:layout_height="wrap_content"
+                 android:textSize="16sp"
+                 android:layout_marginLeft="15dp"/>
+             <TextView
+                 android:id="@+id/tv_idno"
+                 android:textColor="#000000"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="10dp"
+                 android:textSize="16sp" />
+                 </LinearLayout>
+             <include layout="@layout/common_line"></include>
+         </LinearLayout>
+
+         <LinearLayout
+             android:id="@+id/ll_gender"
+             android:layout_width="fill_parent"
+             android:layout_height="40dp"
+             android:orientation="vertical"
+             android:gravity="center_vertical">
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 android:layout_marginBottom="5dp">
+             <TextView
+                 android:text="性别"
+                 android:layout_width="100dp"
+                 android:layout_height="wrap_content"
+                 android:textSize="16sp"
+                 android:layout_marginLeft="15dp"/>
+             <TextView
+                 android:id="@+id/tv_gender"
+                 android:textColor="#000000"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="10dp"
+                 android:textSize="16sp" />
+                 </LinearLayout>
+             <include layout="@layout/common_line"></include>
+         </LinearLayout>
+
+         <LinearLayout
+             android:id="@+id/ll_addr"
+             android:layout_width="fill_parent"
+             android:layout_height="45dp"
+             android:orientation="vertical"
+             android:gravity="center_vertical">
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 android:layout_marginBottom="5dp">
+             <TextView
+                 android:text="家庭住址"
+                 android:layout_width="100dp"
+                 android:layout_height="wrap_content"
+                 android:textSize="16sp"
+                 android:layout_marginLeft="15dp"/>
+             <TextView
+                 android:id="@+id/tv_addr"
+                 android:textColor="#000000"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="10dp"
+                 android:textSize="16sp" />
+                 </LinearLayout>
+             <include layout="@layout/common_line"></include>
+         </LinearLayout>
+
+         <LinearLayout
+             android:id="@+id/ll_company"
+             android:layout_width="fill_parent"
+             android:layout_height="40dp"
+             android:orientation="vertical"
+             android:gravity="center_vertical">
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 android:layout_marginBottom="5dp">
+             <TextView
+                 android:text="工作单位"
+                 android:layout_width="100dp"
+                 android:layout_height="wrap_content"
+                 android:textSize="16sp"
+                 android:layout_marginLeft="15dp"/>
+             <TextView
+                 android:id="@+id/tv_company"
+                 android:textColor="#000000"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="10dp"
+                 android:textSize="16sp" />
+                 </LinearLayout>
+             <include layout="@layout/common_line"></include>
+         </LinearLayout>
+
+         <LinearLayout
+             android:id="@+id/ll_job_title"
+             android:layout_width="fill_parent"
+             android:layout_height="40dp"
+             android:orientation="vertical"
+             android:gravity="center_vertical">
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 android:layout_marginBottom="5dp">
+             <TextView
+                 android:text="职称"
+                 android:layout_width="100dp"
+                 android:layout_height="wrap_content"
+                 android:textSize="16sp"
+                 android:layout_marginLeft="15dp"/>
+             <TextView
+                 android:id="@+id/tv_job_title"
+                 android:textColor="#000000"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="10dp"
+                 android:textSize="16sp" />
+                 </LinearLayout>
+             <include layout="@layout/common_line"></include>
+         </LinearLayout>
+
+         <LinearLayout
+             android:id="@+id/ll_nation"
+             android:layout_width="fill_parent"
+             android:layout_height="40dp"
+             android:orientation="vertical"
+             android:gravity="center_vertical">
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 android:layout_marginBottom="5dp">
+             <TextView
+                 android:text="民族"
+                 android:layout_width="100dp"
+                 android:layout_height="wrap_content"
+                 android:textSize="16sp"
+                 android:layout_marginLeft="15dp"/>
+             <TextView
+                 android:id="@+id/tv_nation"
+                 android:textColor="#000000"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="10dp"
+                 android:textSize="16sp" />
+                 </LinearLayout>
+             <include layout="@layout/common_line"></include>
+         </LinearLayout>
+
+         <LinearLayout
+             android:id="@+id/ll_source"
+             android:layout_width="fill_parent"
+             android:layout_height="40dp"
+             android:orientation="vertical"
+             android:gravity="center_vertical">
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 android:layout_marginBottom="5dp">
+             <TextView
+                 android:text="来源"
+                 android:layout_width="100dp"
+                 android:layout_height="wrap_content"
+                 android:textSize="16sp"
+                 android:layout_marginLeft="15dp"/>
+             <TextView
+                 android:id="@+id/tv_source"
+                 android:textColor="#000000"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="10dp"
+                 android:textSize="16sp" />
+                 </LinearLayout>
+             <include layout="@layout/common_line"></include>
+         </LinearLayout>
+
+         <LinearLayout
+             android:id="@+id/ll_education"
+             android:layout_width="fill_parent"
+             android:layout_height="40dp"
+             android:orientation="vertical"
+             android:gravity="center_vertical">
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 android:layout_marginBottom="5dp">
+             <TextView
+                 android:text="学历"
+                 android:layout_width="100dp"
+                 android:layout_height="wrap_content"
+                 android:textSize="16sp"
+                 android:layout_marginLeft="15dp"/>
+             <TextView
+                 android:id="@+id/tv_education"
+                 android:textColor="#000000"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="10dp"
+                 android:textSize="16sp" />
+                 </LinearLayout>
+             <include layout="@layout/common_line"></include>
+         </LinearLayout>
+
+         <LinearLayout
+             android:id="@+id/ll_month_income"
+             android:layout_width="fill_parent"
+             android:layout_height="40dp"
+             android:orientation="vertical"
+             android:gravity="center_vertical">
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 android:layout_marginBottom="5dp">
+             <TextView
+                 android:text="月收入"
+                 android:layout_width="100dp"
+                 android:layout_height="wrap_content"
+                 android:textSize="16sp"
+                 android:layout_marginLeft="15dp"/>
+             <TextView
+                 android:id="@+id/tv_month_income"
+                 android:textColor="#000000"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="10dp"
+                 android:textSize="16sp" />
+                 </LinearLayout>
+             <include layout="@layout/common_line"></include>
+         </LinearLayout>
+
+         <LinearLayout
+             android:id="@+id/ll_month_outcome"
+             android:layout_width="fill_parent"
+             android:layout_height="40dp"
+             android:orientation="vertical"
+             android:gravity="center_vertical">
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 android:layout_marginBottom="5dp">
+             <TextView
+                 android:text="月支出"
+                 android:layout_width="100dp"
+                 android:layout_height="wrap_content"
+                 android:textSize="16sp"
+                 android:layout_marginLeft="15dp"/>
+             <TextView
+                 android:id="@+id/tv_month_outcome"
+                 android:textColor="#000000"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="10dp"
+                 android:textSize="16sp" />
+                 </LinearLayout>
+             <include layout="@layout/common_line"></include>
+         </LinearLayout>
+
+         <LinearLayout
+             android:id="@+id/ll_authorized"
+             android:layout_width="fill_parent"
+             android:layout_height="40dp"
+             android:orientation="vertical"
+             android:gravity="center_vertical">
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 android:layout_marginBottom="5dp">
+             <TextView
+                 android:text="是否实名认证"
+                 android:layout_width="100dp"
+                 android:layout_height="wrap_content"
+                 android:textSize="16sp"
+                 android:layout_marginLeft="15dp"/>
+             <TextView
+                 android:id="@+id/tv_authorized"
+                 android:textColor="#000000"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="10dp"
+                 android:textSize="16sp" />
+                 </LinearLayout>
+             <include layout="@layout/common_line"></include>
+         </LinearLayout>
+
+         <LinearLayout
+             android:id="@+id/ll_create_time"
+             android:layout_width="fill_parent"
+             android:layout_height="40dp"
+             android:orientation="vertical"
+             android:gravity="center_vertical">
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 android:layout_marginBottom="5dp">
+             <TextView
+                 android:text="创建时间"
+                 android:layout_width="100dp"
+                 android:layout_height="wrap_content"
+                 android:textSize="16sp"
+                 android:layout_marginLeft="15dp"/>
+             <TextView
+                 android:id="@+id/tv_create_time"
+                 android:textColor="#000000"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="10dp"
+                 android:textSize="16sp" />
+                 </LinearLayout>
+             <include layout="@layout/common_line"></include>
+         </LinearLayout>
+
+     </LinearLayout>
+
+</LinearLayout>
+</ScrollView>

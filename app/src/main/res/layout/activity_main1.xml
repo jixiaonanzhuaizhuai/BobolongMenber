@@ -1,0 +1,318 @@
+<me.hwang.widgets.SmartPullableLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/layout_pullable"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+<ScrollView
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+		android:orientation="horizontal">
+        <TextView
+            android:id="@+id/menu_txt"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:padding="10dp"
+			android:textSize="20sp"
+			android:layout_marginLeft="10dp"
+			android:layout_gravity="center_vertical"
+            android:text="菜单" />
+        <ImageView
+            android:id="@+id/imageView1"
+            android:scaleType="centerInside"
+            android:layout_width="100dip"
+            android:layout_height="50dip"
+			android:layout_weight="1"
+			android:layout_gravity="center_vertical"
+			android:src="@mipmap/logo" />
+        <TextView
+            android:id="@+id/messageBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+			android:layout_gravity="center_vertical"
+			android:layout_weight="1"
+			android:padding="10dp"
+			android:textSize="20sp"
+            android:text="消息" />
+        <TextView
+            android:id="@+id/signBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+			android:layout_gravity="center_vertical"
+			android:layout_weight="1"
+			android:padding="10dp"
+			android:textSize="20sp"
+            android:text="签到" />
+    </LinearLayout>
+    <View
+        android:id="@+id/view1"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#cccccc" />
+	<RelativeLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content">
+        
+	    <ImageView
+            android:id="@+id/touxiang"
+            android:scaleType="centerInside"
+            android:layout_width="100dip"
+            android:layout_height="100dip"
+            android:layout_centerVertical="true"/>
+	    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/touxiang"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="姓名: " />
+		<TextView
+			android:id="@+id/tv_name"
+			android:layout_toRightOf="@+id/name"
+			android:layout_marginTop="10dp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" />
+	    <TextView
+			android:id="@+id/card"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/name"
+			android:layout_toRightOf="@+id/touxiang"
+			android:layout_marginLeft="20dp"
+			android:layout_marginTop="10dp"
+			android:text="卡号：" />
+		<TextView
+			android:id="@+id/tv_card_no"
+			android:layout_marginTop="10dp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/tv_name"
+			android:layout_toRightOf="@+id/card"/>
+	    <TextView
+	        android:id="@+id/scores"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/card"
+	        android:layout_toRightOf="@+id/touxiang"
+	        android:layout_marginLeft="20dp"
+        	android:layout_marginTop="10dp"
+	        android:text="积分：" />
+		<TextView
+			android:id="@+id/tv_point"
+			android:layout_below="@id/tv_card_no"
+			android:layout_marginTop="10dp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_toRightOf="@+id/scores"/>
+	    
+	    <TextView
+	        android:id="@+id/grades"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/card"
+	        android:layout_toRightOf="@+id/tv_point"
+	        android:layout_marginLeft="20dp"
+        	android:layout_marginTop="10dp"
+	        android:text="等级：" />
+		<TextView
+			android:id="@+id/tv_level"
+			android:layout_below="@id/tv_card_no"
+			android:layout_marginTop="10dp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_toRightOf="@+id/grades"/>
+		<TextView
+			android:id="@+id/sexTxt"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/scores"
+			android:layout_toRightOf="@+id/touxiang"
+			android:layout_marginLeft="20dp"
+			android:layout_marginTop="10dp"
+			android:text="性别: "
+			android:visibility="gone"/>
+		<TextView
+			android:id="@+id/tv_gender"
+			android:layout_below="@+id/tv_point"
+			android:layout_marginTop="10dp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_toRightOf="@+id/sexTxt"
+			android:visibility="gone"/>
+		<TextView
+			android:id="@+id/ageTxt"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/grades"
+			android:layout_toRightOf="@+id/sexTxt"
+			android:layout_marginLeft="40dp"
+			android:layout_marginTop="10dp"
+			android:text="年龄："
+			android:visibility="gone"/>
+		<TextView
+			android:id="@+id/tv_age"
+			android:layout_below="@+id/tv_level"
+			android:layout_marginTop="10dp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_toRightOf="@+id/ageTxt"
+			android:visibility="gone"/>
+
+		<TextView
+			android:id="@+id/nationTxt"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/sexTxt"
+			android:layout_toRightOf="@+id/touxiang"
+			android:layout_marginLeft="20dp"
+			android:layout_marginTop="10dp"
+			android:text="民族："
+			android:visibility="gone"/>
+		<TextView
+			android:id="@+id/tv_nation"
+			android:layout_below="@+id/tv_gender"
+			android:layout_marginTop="10dp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_toRightOf="@+id/nationTxt"
+			android:visibility="gone"/>
+		<TextView
+			android:id="@+id/birthdayTxt"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/ageTxt"
+			android:layout_toRightOf="@+id/tv_nation"
+			android:layout_marginLeft="20dp"
+			android:layout_marginTop="10dp"
+			android:text="生日："
+			android:visibility="gone"/>
+		<TextView
+			android:id="@+id/tv_birthday"
+			android:layout_below="@+id/tv_age"
+			android:layout_marginTop="10dp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_toRightOf="@id/birthdayTxt"
+			android:visibility="gone"/>
+
+	    <TextView
+	        android:id="@+id/moreInfo"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/nationTxt"
+			android:layout_toRightOf="@+id/touxiang"	    
+			android:layout_marginLeft="50dp"
+			android:layout_marginTop="10dp"
+			android:textSize="20sp"
+	        android:text="更多信息>>" />
+	    
+	    <TextView
+	        android:id="@+id/editInfo"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/moreInfo"
+	        android:layout_toRightOf="@+id/moreInfo"
+	        android:layout_marginRight="10dp"
+	        android:layout_marginLeft="30dp"
+	        android:text="编辑" />
+	</RelativeLayout>
+
+	<View
+		android:id="@+id/view4"
+		android:layout_width="fill_parent"
+		android:layout_height="1dp"
+		android:background="#cccccc" />
+	<TextView
+		android:id="@+id/textView4"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center_horizontal"
+		android:textSize="20sp"
+		android:text="热门活动" />
+
+	<com.stx.xhb.xbanner.XBanner
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		android:id="@+id/recommendBanner"
+		android:layout_width="match_parent"
+		android:layout_height="180dp"
+		app:AutoPlayTime="3000"
+		app:pointsContainerBackground="#44aaaaaa"
+		app:pointNormal="@drawable/shape_noraml"
+		app:pointSelect="@drawable/shape_selected"
+		app:pointsPosition="RIGHT"
+		app:tipTextSize="12sp"
+		app:isShowNumberIndicator="true"
+		app:isShowIndicatorOnlyOne="true"
+		app:pageChangeDuration="800"/>
+	<TextView
+		android:id="@+id/rmoreactivity"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:textSize="18sp"
+		android:gravity="right"
+		android:padding="5dp"
+		android:text="更多活动>>" />
+	<View
+		android:id="@+id/view3"
+		android:layout_width="fill_parent"
+		android:layout_height="1dp"
+		android:background="#cccccc" />
+	<TextView
+		android:id="@+id/textView2"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center_horizontal"
+		android:textSize="20sp"
+		android:text="所有活动" />
+	<com.stx.xhb.xbanner.XBanner
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		android:id="@+id/allBanner"
+		android:layout_width="match_parent"
+		android:layout_height="180dp"
+		app:AutoPlayTime="3000"
+		app:pointsContainerBackground="#44aaaaaa"
+		app:pointNormal="@drawable/shape_noraml"
+		app:pointSelect="@drawable/shape_selected"
+		app:pointsPosition="RIGHT"
+		app:tipTextSize="12sp"
+		app:isShowNumberIndicator="true"
+		app:isShowIndicatorOnlyOne="true"
+		app:pageChangeDuration="800"/>
+	<TextView
+		android:id="@+id/moreactivity"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:gravity="right"
+		android:textSize="18sp"
+		android:padding="5dp"
+		android:text="更多活动>>" />
+
+	<View
+		android:id="@+id/view2"
+		android:layout_width="fill_parent"
+		android:layout_height="1dp"
+		android:background="#cccccc" />
+	<TextView
+		android:id="@+id/textView6"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center_horizontal"
+		android:textSize="20sp"
+		android:text="活动标签列表" />
+	<android.support.v7.widget.RecyclerView
+		android:id="@+id/rc_tags_list"
+		android:background="@color/white"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"/>
+</LinearLayout>
+</ScrollView>
+</me.hwang.widgets.SmartPullableLayout>

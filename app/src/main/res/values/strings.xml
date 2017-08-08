@@ -1,0 +1,40 @@
+<resources>
+
+    <string name="aar_save">Save</string>
+    <string name="aar_paused">Paused</string>
+    <string name="aar_recording">Recording</string>
+    <string name="aar_playing">Playing</string>
+    <string name="app_name">播播龙会员</string>
+    <string name="personal">个人资料</string>
+    <string name="activity">活动管理</string>
+    <string name="scores">我的积分</string>
+    <string name="exchange">积分兑换</string>
+    <string name="card">我的卡券</string>
+    <string name="sign">我要签到</string>
+    <string name="messages">我的消息</string>
+    <string name="collection">收藏</string>
+    <string name="question">问题反馈</string>
+    <string name="setting">设置</string>
+    <string name="welcomWords">欢迎使用龙广会员APP，登陆享受更多权益：方便快捷管理您的积分、订单，实时的信息管理，完善的会员管理!</string>
+    <string name="error_no_sdcard">没有SD卡，无法存储录音数据</string>
+    <string name="error_state_record">正在录音中，请先停止录音</string>
+    <string name="error_unknown">无法识别的错误</string>
+
+     <string name="argument_empty">参数不完整</string>
+    <string name="phone_format_error">手机号格式不正确</string>
+    <string name="http_network_disconnect">网络连接错误</string>
+    <string name="server_error">服务器错误</string>
+
+    <string name="code_0">操作成功</string>
+    <string name="code_1">需要登录</string>
+    <string name="code_2">权限不够</string>
+    <string name="code_3">没有数据</string>
+    <string name="code_4">已经存在同名的数据</string>
+    <string name="code_5">登录失败</string>
+    <string name="code_6">验证码错误</string>
+    <string name="code_7">短信验证码超时失效，请重试</string>
+    <string name="code_8">新旧密码一致</string>
+    <string name="code_9">已经注册过</string>
+    <string name="code_10">已经注册过</string>
+    <string name="code_11">无法删除</string>
+</resources>

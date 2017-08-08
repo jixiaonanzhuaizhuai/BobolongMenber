@@ -1,0 +1,74 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "com.lgmember.lgmember"
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 1
+        versionName "播播龙会员"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        manifestPlaceholders = [
+                GETUI_APP_ID : "LXrv9cX7Q19illhrG3UJt8",
+                GETUI_APP_KEY : "aVmPPxsAOg6i5b7eUKwHQ5",
+                GETUI_APP_SECRET : "xWg6BAiKg59wpXVftJMOK4"
+        ]
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "x86_64","x86"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+repositories{
+    flatDir{
+        dir 'libs'
+    }
+}
+allprojects {
+    repositories {
+        jcenter()
+        maven {
+            url 'https://dl.bintray.com/leaking/maven'
+        }
+        maven {
+            url "https://jitpack.io"
+        }
+    }
+}
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.tsy:myokhttp:1.1.3'
+    compile 'com.leaking.slideswitch:slideswitch:1.0.0'
+    compile 'com.yuyh.imgsel:library:1.3.2'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25+'
+    testCompile 'junit:junit:4.12'
+    compile 'com.xhb:xbanner:1+'/*轮播图，带有标题*/
+    compile 'com.nineoldandroids:library:2.4.0'/*用轮播库时，用到的*/
+    compile 'com.getui:sdk:2.10.2.0'
+    compile 'com.android.support:recyclerview-v7:25+'
+    /*tuisong*/
+    compile 'com.google.android.gms:play-services-appindexing:8.4.0'
+    compile 'com.kailashdabhi:om-recorder:1.1.0'
+    /*这两个是关于录音的引用*/
+    compile 'com.cleveroad:audiovisualization:1.0.0'
+    compile 'com.facebook.stetho:stetho:1.4.2'
+    compile 'com.facebook.stetho:stetho-okhttp3:1.4.2'
+    compile 'com.github.ikidou:FragmentBackHandler:2.1'/*关于Fragment返回键处理*/
+    /*测试工具*/
+    compile 'com.yanzhenjie:permission:1.0.8'/*权限的引用*/
+    compile 'me.rawnhwang.library:smart-android-widgets:1.0.0'/*下拉、上拉刷新页面*/
+    compile project(path: ':libzxing')
+
+
+}

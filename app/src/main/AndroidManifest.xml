@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lgmember.activity">
+
+
+    <!--照相机-->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <!-- iBeancon功能所需权限 -->;
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <!-- 个推3.0电子围栏功能所需权限 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <!--<uses-permission android:name="android.permission.GET_TASKS" />-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+   <!-- 录音有关的权限-->
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:name="com.lgmember.app.App"
+        android:theme="@style/AppTheme">
+        <activity android:name=".WelcomActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".person.PersonalActivity"/>
+        <activity android:name=".BaseActivity"/>
+        <activity android:name=".LoginActivity"/>
+        <activity android:name=".RegisterActivity"/>
+        <activity android:name=".project.ProjectMessageManageActivity"/>
+        <activity android:name=".score.MyScoresActivity"/>
+        <activity android:name=".score.ExchangeScoresActivity"/>
+        <activity android:name=".card.MyCardActivity"/>
+        <activity android:name=".message.MyMessageActivity"/>
+        <activity android:name=".sign.ProgramSignActivity"/>
+        <activity android:name=".project.ProjectMessageDetailActivity"/>
+        <activity android:name=".person.EditPersonalActivity"/>
+        <activity android:name=".person.MessageCodeActivity"/>
+        <activity android:name=".person.CertificationActivity"/>
+        <activity android:name=".person.PwdCodeActivity"/>
+        <activity android:name=".person.NewPwdActivity"/>
+        <activity android:name=".score.ExchangeGiftDetailActivity"/>
+        <activity android:name=".feedback.ReportProblemActivity"/>
+        <activity android:name=".collection.CollectionActivity"/>
+        <activity android:name=".card.CardDetailActivity"/>
+        <activity android:name=".message.MessageDetailActivity"/>
+        <activity android:name=".person.ModifyPwdActivity"/>
+        <activity android:name=".score.ExchangeGiftInfoActivity"/>
+        <activity android:name=".person.PersonalAllActivity"/>
+        <activity android:name=".setting.AboutUsActivity"/>
+        <activity android:name="com.lgmember.AudioRecorder.AudioRecorderActivity1"/>
+        <activity android:name="com.lgmember.AudioRecorder.AudioRecorderActivity"/>
+        <activity android:name=".setting.SettingActivity"/>
+        <activity android:name=".message.RemindDetailActivity"/>
+        <activity android:name=".MainGuestActivity"/>
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".project.TagProjectMessageListActivity"/>
+
+        <service
+            android:name="com.lgmember.service.DemoPushService"
+            android:exported="true"
+            android:label="PushService"
+            android:process=":pushservice">
+        </service>
+        <service android:name="com.lgmember.service.DemoIntentService"/>
+    </application>
+
+</manifest>
