@@ -71,6 +71,13 @@
         <activity android:name=".MainGuestActivity"/>
         <activity android:name=".MainActivity"/>
         <activity android:name=".project.TagProjectMessageListActivity"/>
+        <activity
+            android:name="com.yzq.zxinglibrary.android.CaptureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+
+        </activity>
 
         <service
             android:name="com.lgmember.service.DemoPushService"

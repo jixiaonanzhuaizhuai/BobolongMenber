@@ -22,6 +22,7 @@ import com.lgmember.bean.ProjectMessageBean;
 import com.lgmember.business.collection.CollectionAddBusiness;
 import com.lgmember.business.collection.CollectionListBusiness;
 import com.lgmember.model.ProjectMessage;
+import com.lgmember.util.DataLargeHolder;
 import com.lgmember.util.StringUtil;
 import com.lgmember.view.TopBarView;
 
@@ -115,11 +116,14 @@ public class CollectionActivity extends BaseActivity implements CollectionListBu
 		lv_collection_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+				ProjectMessage projectMessage =
+						collectionList.get(position);
+				DataLargeHolder.getInstance()
+						.save(projectMessage.getId(),projectMessage);
 				Intent intent = new Intent(CollectionActivity.this,ProjectMessageDetailActivity.class);
 				Bundle bundle = new Bundle();
-				ProjectMessage projectMessage = collectionList.get(position);
-				bundle.putSerializable("projectMessage",
-						projectMessage);
+				bundle.putInt("id",projectMessage.getId());
 				intent.putExtras(bundle);
 				startActivity(intent);
 			}

@@ -158,7 +158,7 @@ public class MainActivity extends BaseActivity implements OnClickListener,
 	private void getInitData(){
 		//录音
 		sp = this.getSharedPreferences(Common.SP_NAME, MODE_PRIVATE);
-		if_auto_start = sp.getBoolean(Common.SP_IF_RECORDER,true);
+		if_auto_start = sp.getBoolean(Common.SP_IF_RECORDER,false);
 		versionNoUpdateTime();
 		pageNo = 1;
 		tagList.clear();

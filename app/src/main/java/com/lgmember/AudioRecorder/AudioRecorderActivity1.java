@@ -10,7 +10,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.annotation.NonNull;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -35,12 +34,11 @@ import com.lgmember.business.project.ActivityCodeBusiness;
 import com.lgmember.business.sign.UploadRecordBusiness;
 import com.lgmember.util.StringUtil;
 import com.lgmember.view.TopBarView;
-import com.xys.libzxing.zxing.activity.CaptureActivity;
 import com.yanzhenjie.permission.AndPermission;
 import com.yanzhenjie.permission.PermissionListener;
 import com.yanzhenjie.permission.Rationale;
 import com.yanzhenjie.permission.RationaleListener;
-;import org.json.JSONObject;
+import com.yzq.zxinglibrary.Consants;
 
 import java.io.File;
 import java.util.HashMap;
@@ -214,14 +212,19 @@ public class AudioRecorderActivity1 extends BaseActivity
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == RESULT_OK){
-            Bundle bundle = data.getExtras();
-            String result = bundle.getString("result");
-            //扫描二维码签到请求服务器
-            getCodeSign(result);
+            if (data != null) {
+                String content = data.getStringExtra(Consants.CODED_CONTENT);
+                getCodeSign(content);
+            }
+
         }
         if(requestCode == REQUEST_CODE_SETTING) {
 
-            startActivityForResult(new Intent(this, CaptureActivity.class) , 0);
+            Intent intent = new Intent(AudioRecorderActivity1.this,
+                    com.yzq.zxinglibrary.android.CaptureActivity.class);
+            startActivityForResult(intent, 0);
+
+            /*startActivityForResult(new Intent(this, CaptureActivity.class) , 0);*/
 
         }
     }
@@ -371,9 +374,6 @@ public class AudioRecorderActivity1 extends BaseActivity
                     if (recordView.isClickable()) {
                         timeCount.start();
                     }
-                   /* recorderSecondsElapsed++;
-                    String totalTime = Util.formatSeconds(recorderSecondsElapsed);
-                    int t = Integer.parseInt(totalTime.substring(totalTime.length()-2,totalTime.length()));*/
                 }
             }
         });
@@ -433,7 +433,10 @@ public class AudioRecorderActivity1 extends BaseActivity
 
     @Override
     public void onActivityCodeSuccess(String string) {
-        showToast(string);
+
+        btn_scan.setText(string+"");
+        btn_scan.setEnabled(false);
+        //#d4237a
     }
 
     @Override
@@ -453,7 +456,10 @@ public class AudioRecorderActivity1 extends BaseActivity
         public void onSucceed(int requestCode, @NonNull List<String> grantPermissions) {
             switch (requestCode) {
                 case REQUEST_CODE_CAMERA: {
-                    startActivityForResult(new Intent(AudioRecorderActivity1.this, CaptureActivity.class) , 0);
+                    Intent intent = new Intent(AudioRecorderActivity1.this,
+                            com.yzq.zxinglibrary.android.CaptureActivity.class);
+                    startActivityForResult(intent, 0);
+                    /*startActivityForResult(new Intent(AudioRecorderActivity1.this, CaptureActivity.class) , 0);*/
                     break;
                 }
             }

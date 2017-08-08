@@ -29,12 +29,12 @@
     <string name="code_1">需要登录</string>
     <string name="code_2">权限不够</string>
     <string name="code_3">没有数据</string>
-    <string name="code_4">已经存在同名的数据</string>
+    <string name="code_4">已注册,请登陆</string>
     <string name="code_5">登录失败</string>
     <string name="code_6">验证码错误</string>
     <string name="code_7">短信验证码超时失效，请重试</string>
     <string name="code_8">新旧密码一致</string>
-    <string name="code_9">已经注册过</string>
+    <string name="code_9">密码错误</string>
     <string name="code_10">已经注册过</string>
     <string name="code_11">无法删除</string>
 </resources>

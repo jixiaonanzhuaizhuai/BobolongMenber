@@ -68,7 +68,8 @@ dependencies {
     /*测试工具*/
     compile 'com.yanzhenjie:permission:1.0.8'/*权限的引用*/
     compile 'me.rawnhwang.library:smart-android-widgets:1.0.0'/*下拉、上拉刷新页面*/
-    compile project(path: ':libzxing')
+    compile 'com.github.yuzhiqiang1993:zxing:1.5'
+
 
 
 }

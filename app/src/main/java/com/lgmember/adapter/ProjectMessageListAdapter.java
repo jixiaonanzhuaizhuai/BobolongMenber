@@ -89,7 +89,6 @@ public class ProjectMessageListAdapter extends BaseAdapter {
         if (str == null){
             vh.iv_img.setImageResource(R.drawable.touxiang);
         }else {
-
             String path = Common.URL_IMG_BASE+str;
             StringUtil.setNetworkBitmap(context,path,vh.iv_img);
         }
